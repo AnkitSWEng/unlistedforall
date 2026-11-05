@@ -314,7 +314,7 @@ function Brand() {
     <Link href="/" className="flex shrink-0 items-center gap-2">
       <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#102d4b] text-lg font-black text-white">U</span>
       <span className="text-[21px] font-extrabold tracking-tight text-[#152b43]">
-        Unlisted<span className="text-[#ed9b37]">Zone</span>
+        Unlisted<span className="text-[#ed9b37]">ForAll</span>
       </span>
     </Link>
   );
