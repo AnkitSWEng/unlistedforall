@@ -702,7 +702,7 @@ export default function EventsPage() {
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-3 px-5 py-6">
           <Brand />
           <span className="text-xs text-[#8995a2]">
-            © {new Date().getFullYear()} UnlistedZone. All rights reserved.
+            © {new Date().getFullYear()} UnlistedForAll. All rights reserved.
           </span>
         </div>
       </footer>

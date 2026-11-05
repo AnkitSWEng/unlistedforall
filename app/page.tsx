@@ -142,7 +142,7 @@ export default function Home() {
             <Link href="/" className="text-emerald-600">Home</Link>
             <Link href="/shares" className="hover:text-emerald-600">Unlisted Shares</Link>
             <Link href="/sectors" className="hover:text-emerald-600">Sectors</Link>
-            <Link href="/research" className="hover:text-emerald-600">Research</Link>
+            <Link href="/events" className="hover:text-emerald-600">Events</Link>
             <Link href="/contact" className="hover:text-emerald-600">Contact</Link>
           </nav>
 
@@ -166,7 +166,7 @@ export default function Home() {
               <Link href="/">Home</Link>
               <Link href="/shares">Unlisted Shares</Link>
               <Link href="/sectors">Sectors</Link>
-              <Link href="/research">Research</Link>
+              <Link href="/events">Events</Link>
               <Link href="/contact">Contact</Link>
               <Link href="/login">Login</Link>
             </nav>
@@ -204,11 +204,11 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/research"
-                className="rounded-xl border border-slate-200 bg-white px-7 py-4 text-sm font-bold text-slate-700 hover:border-emerald-500"
-              >
-                Explore Research
-              </Link>
+  href="/events"
+  className="rounded-xl border border-slate-200 bg-white px-7 py-4 text-sm font-bold text-slate-700 hover:border-emerald-500"
+>
+  Explore Events
+</Link>
             </div>
 
             <div className="mt-10 flex items-center gap-3 text-sm text-slate-500">
@@ -374,7 +374,7 @@ export default function Home() {
             <div className="mt-4 space-y-3 text-sm text-slate-500">
               <Link href="/shares" className="block hover:text-emerald-600">Unlisted Shares</Link>
               <Link href="/sectors" className="block hover:text-emerald-600">Sectors</Link>
-              <Link href="/research" className="block hover:text-emerald-600">Research</Link>
+              <Link href="/events" className="block hover:text-emerald-600">Events</Link>
             </div>
           </div>
 
