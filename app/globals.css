@@ -1,4 +1,43 @@
+
 @import "tailwindcss";
+
+:root {
+  --background: #f4f6f8;
+  --foreground: #10243b;
+
+  --brand-navy: #10243b;
+  --brand-navy-light: #193650;
+  --brand-slate: #263d56;
+  --brand-lime: #b7f36b;
+  --brand-lime-dark: #9bd94f;
+
+  --surface: #ffffff;
+  --surface-muted: #edf1f4;
+  --border: #e2e8ee;
+
+  --text-primary: #10243b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  --success: #168653;
+  --danger: #dc5555;
+
+  --radius-card: 16px;
+}
+
+@theme inline {
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-light: var(--brand-navy-light);
+  --color-brand-slate: var(--brand-slate);
+  --color-brand-lime: var(--brand-lime);
+  --color-brand-lime-dark: var(--brand-lime-dark);
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+
+  --font-sans: Arial, Helvetica, sans-serif;
+}
 
 * {
   box-sizing: border-box;
@@ -6,11 +45,98 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
   margin: 0;
-  background: white;
-  color: #0f172a;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--brand-lime);
+  color: var(--brand-navy);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand-lime-dark);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.brand-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--brand-navy) 0%,
+    var(--brand-navy-light) 100%
+  );
+}
+
+.lime-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--brand-lime) 0%,
+    var(--brand-lime-dark) 100%
+  );
+}
+
+.financial-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.financial-card:hover {
+  border-color: #cbd5df;
+  box-shadow: 0 12px 32px rgb(16 36 59 / 7%);
+  transform: translateY(-2px);
+}
+
+.muted-text {
+  color: var(--text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
